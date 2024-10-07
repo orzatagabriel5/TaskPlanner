@@ -1,0 +1,119 @@
+<resources>
+    <string name="app_name">VerBeauty</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="sms_template">Hello, %1$s! We are expecting you on %2$s for your appointment. Please make sure you arrive in time. Thank you!</string>
+    <string name="remove_service_title">Remove service?</string>
+    <string name="general_ok">Ok</string>
+    <string name="general_cancel">Cancel</string>
+    <string name="general_save">Save</string>
+    <string name="remove_service_notification">Service %1$s removed!</string>
+    <string name="general_send">Send</string>
+    <string name="remove_client_ignore_list">Client %1$s removed!</string>
+
+    <!-- Add event activity -->
+    <string name="add_event_activity_title">Add event</string>
+    <string name="edit_event_activity_title">Edit event</string>
+    <string name="add_event_add_services_dialog_title">Add services</string>
+    <string name="add_event_error_name_not_selected">Select a name from list!</string>
+    <string name="add_event_error_time_interval">Time must be between 8:00 and 22:00!</string>
+    <string name="add_event_success_notification">Event created!</string>
+    <string name="edit_event_success_notification">Event updated!</string>
+
+    <string name="add_event_layout_client_name">Client name</string>
+    <string name="add_event_layout_services">Services:</string>
+    <string name="add_event_layout_add_services_button">Add services</string>
+    <string name="add_event_layout_reminders">Reminders:</string>
+    <string name="add_event_layout_reminder_instant">Instant message when create event</string>
+    <string name="add_event_layout_reminder_1h">1h before</string>
+    <string name="add_event_layout_reminder_2h">2h before</string>
+    <string name="add_event_layout_reminder_3h">3h before</string>
+    <string name="add_event_layout_reminder_8h">8h before</string>
+    <string name="add_event_layout_reminder_12h">12h before</string>
+    <string name="add_event_layout_reminder_24h">24h before</string>
+
+    <!-- Add service activity -->
+    <string name="add_service_activity_title">Add service</string>
+    <string name="add_service_success_notification">Service created!</string>
+    <string name="edit_service_success_notification">Service updated!</string>
+    <string name="add_service_error_name_required">Service name is required!</string>
+    <string name="add_service_error_duration_required">Duration is required!</string>
+    <string name="add_service_error_price_required">Price is required!</string>
+
+    <!--Add service dialog -->
+    <string name="add_service_dialog_service_name">Service name</string>
+    <string name="add_service_dialog_duration">Duration in minutes</string>
+    <string name="add_service_dialog_price">Price</string>
+
+    <!-- Event detail activity -->
+    <string name="event_detail_activity_title">Event detail</string>
+    <string name="event_detail_remove_button_text">Remove event?</string>
+
+    <!-- Settings activity -->
+    <string name="settings_activity_title">Settings</string>
+    <string name="settings_save_success_notification">Settings saved!</string>
+    <string name="settings_sms_header">SMS message:</string>
+    <string name="settings_sms_info_text">The following texts will be replaced with corresponding data:\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s\n%6$s</string>
+
+    <!-- Old Clients activity -->
+    <string name="old_clients_activity_title">Old clients</string>
+
+    <!-- Payments activity -->
+    <string name="payments_activity_title">Payments</string>
+    <string name="payments_activity_name_header">Client name</string>
+    <string name="payments_activity_total_header">Total paid</string>
+
+    <!-- Message Clients activity -->
+    <string name="messageClients_activity_title">Promotions</string>
+    <string name="checkbox_old_clients">Send to old clients</string>
+    <string name="message_header">Message:</string>
+    <string name="ignore_list_header">Ignore List:</string>
+    <string name="ignore_client_exist_error">Client is already ignored!</string>
+    <string name="promotion_message">Promotion Message</string>
+    <string name="ignore_new_contact">Ignore new contact</string>
+
+
+    <!-- Api Async Task -->
+    <string name="google_calendar_services_header">Services</string>
+
+    <!-- SMS Template variables -->
+    <string name="sms_name">{name}</string>
+    <string name="sms_duration">{duration}</string>
+    <string name="sms_start">{start}</string>
+    <string name="sms_price">{price}</string>
+    <string name="sms_services">{services}</string>
+    <string name="sms_notes">{notes}</string>
+
+    <!-- Navigation menu items -->
+    <string name="nav_day">Day</string>
+    <string name="nav_3day">3 Day</string>
+    <string name="nav_7day">Week</string>
+    <string name="nav_month">Month</string>
+    <string name="nav_services">Services</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_oldClients">Old Clients</string>
+    <string name="nav_payments">Payments</string>
+    <string name="nav_messageClients">Promotions</string>
+
+    <!-- Colors for services -->
+    <string name="yellow">Yellow</string>
+    <string name="red">Red</string>
+    <string name="purple">Purple</string>
+    <string name="maroon">Maroon</string>
+    <string name="aqua">Aqua</string>
+    <string name="lime">Lime</string>
+    <string name="green">Green</string>
+    <string name="blue">Blue</string>
+    <string name="orange">Orange</string>
+    <string name="light_green">Light green</string>
+    <string name="turquoise">Turquoise</string>
+
+    <!-- Days of week -->
+    <string name="day1">Duminică</string>
+    <string name="day2">Luni</string>
+    <string name="day3">Marți</string>
+    <string name="day4">Miercuri</string>
+    <string name="day5">Joi</string>
+    <string name="day6">Vineri</string>
+    <string name="day7">Sâmbătă</string>
+</resources>

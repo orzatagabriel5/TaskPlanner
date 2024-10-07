@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/ic_local_offer_black_24dp" />
+
+    <EditText
+        android:id="@+id/serviceField"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:hint="@string/add_service_dialog_service_name"
+        android:inputType="textCapSentences"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="13dp"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_below="@+id/imageView"
+        app:srcCompat="@drawable/ic_access_time_black_15dp" />
+
+    <EditText
+        android:id="@+id/durationField"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_below="@+id/serviceField"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="@string/add_service_dialog_duration"
+        android:inputType="number"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginTop="12dp"
+        app:srcCompat="@drawable/ic_attach_money_black_24dp" />
+
+    <EditText
+        android:id="@+id/priceField"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_below="@+id/durationField"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="@string/add_service_dialog_price"
+        android:inputType="number"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/serviceColorLabel"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_below="@+id/priceField"
+        android:layout_marginTop="6dp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/colorAutoComplete"
+        android:layout_width="156dp"
+        android:layout_height="37dp"
+        android:layout_alignStart="@+id/serviceField"
+        android:layout_below="@+id/priceField"
+        android:editable="false"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/hiddenColorField"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/priceField"
+        android:layout_marginEnd="119dp"
+        android:visibility="visible" />
+
+</RelativeLayout>

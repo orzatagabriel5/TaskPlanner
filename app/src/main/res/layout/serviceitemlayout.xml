@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants">
+
+    <TextView
+        android:id="@+id/serviceNameField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/serviceDurationField"
+        android:layout_marginStart="72dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/servicePriceField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/serviceNameField"
+        android:layout_below="@+id/serviceNameField"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/serviceDurationField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="91dp"
+        android:layout_marginTop="9dp"
+        android:text="TextView" />
+
+    <ImageButton
+        android:id="@+id/removeServiceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="26dp"
+        android:layout_marginTop="18dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/ic_remove_circle_black_24dp" />
+
+    <ImageView
+        android:id="@+id/serviceItemColor"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/removeServiceButton"
+        android:layout_marginStart="21dp" />
+
+</RelativeLayout>

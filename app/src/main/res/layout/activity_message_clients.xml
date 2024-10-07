@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MessageClientsActivity">
+
+    <TextView
+        android:id="@+id/ignoreListLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/ignore_list_header"
+        app:layout_constraintEnd_toStartOf="@+id/addButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/oldClientsCheckbox"
+        app:layout_constraintTop_toBottomOf="@+id/oldClientsCheckbox" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/messageClientsToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ToolbarColoredBackArrow"
+        app:titleTextColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:onClick="sendMessage"
+        android:text="@string/general_send"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@+id/messageClientsToolbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/messageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/message_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageClientsToolbar" />
+
+    <EditText
+        android:id="@+id/promotionMessageTextView"
+        android:layout_width="289dp"
+        android:layout_height="122dp"
+        android:layout_below="@+id/smsLabel"
+        android:layout_alignStart="@+id/smsLabel"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginRight="128dp"
+        android:ems="10"
+        android:hint="@string/promotion_message"
+        android:inputType="textMultiLine"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintStart_toStartOf="@+id/messageLabel"
+        app:layout_constraintTop_toBottomOf="@+id/messageLabel" />
+
+    <ListView
+        android:id="@+id/ignoreContactsList"
+        android:layout_width="329dp"
+        android:layout_height="164dp"
+        app:layout_constraintStart_toStartOf="@+id/ignoreListLabel"
+        app:layout_constraintTop_toBottomOf="@+id/ignoreListLabel" />
+
+    <CheckBox
+        android:id="@+id/oldClientsCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checkbox_old_clients"
+        app:layout_constraintStart_toStartOf="@+id/promotionMessageTextView"
+        app:layout_constraintTop_toBottomOf="@+id/promotionMessageTextView" />
+
+    <ImageButton
+        android:id="@+id/addButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:background="@android:color/transparent"
+        android:onClick="ignoreClient"
+        app:layout_constraintEnd_toEndOf="@+id/oldClientsCheckbox"
+        app:layout_constraintTop_toBottomOf="@+id/oldClientsCheckbox"
+        app:srcCompat="@drawable/ic_add_circle_black_244dp" />
+
+</android.support.constraint.ConstraintLayout>

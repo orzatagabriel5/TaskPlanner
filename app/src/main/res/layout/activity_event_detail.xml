@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/addEventLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:context=".activities.EventDetailActivity">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/eventDetailToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:theme="@style/ToolbarColoredBackArrow"
+            app:titleTextColor="@android:color/white">
+
+        </android.support.v7.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/clientNameField"
+            android:layout_width="294dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="96dp"
+            android:editable="false"
+            android:gravity="center_vertical"
+            android:inputType="none"
+            android:nextFocusLeft="@id/clientNameField"
+            android:nextFocusUp="@id/clientNameField"
+            android:textSize="13sp"
+            app:layout_constraintStart_toEndOf="@+id/clientNameIco"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dateField"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:editable="false"
+            android:ems="10"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:inputType="none"
+            android:textSize="13sp"
+            app:layout_constraintDimensionRatio="w,3.5:1"
+            app:layout_constraintStart_toStartOf="@+id/clientNameField"
+            app:layout_constraintTop_toBottomOf="@+id/clientNameField" />
+
+        <TextView
+            android:id="@+id/timeFromField"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="20dp"
+            android:editable="false"
+            android:ems="10"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:inputType="none"
+            android:textSize="13sp"
+            app:layout_constraintDimensionRatio="w,2:1"
+            app:layout_constraintStart_toEndOf="@+id/dateField"
+            app:layout_constraintTop_toBottomOf="@+id/clientNameField" />
+
+        <TextView
+            android:id="@+id/timeToField"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="20dp"
+            android:editable="false"
+            android:ems="10"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:inputType="none"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@+id/clientNameField"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/clientNameField" />
+
+        <ImageView
+            android:id="@+id/clientNameIco"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="48dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eventDetailToolbar"
+            app:srcCompat="@drawable/ic_person_black_24dp" />
+
+        <ImageView
+            android:id="@+id/dateTimeIco"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintEnd_toEndOf="@+id/clientNameIco"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/clientNameIco"
+            app:layout_constraintTop_toBottomOf="@+id/clientNameIco"
+            app:srcCompat="@drawable/ic_date_range_black_24dp" />
+
+        <TextView
+            android:id="@+id/serviceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/add_event_layout_services"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/dateField"
+            app:layout_constraintTop_toBottomOf="@+id/dateField" />
+
+        <TextView
+            android:id="@+id/remindersLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="@string/add_event_layout_reminders"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/priceField"
+            app:layout_constraintTop_toBottomOf="@+id/priceField" />
+
+        <CheckBox
+            android:id="@+id/reminder1h"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clickable="false"
+            android:text="@string/add_event_layout_reminder_1h"
+            app:layout_constraintStart_toStartOf="@+id/remindersLabel"
+            app:layout_constraintTop_toBottomOf="@+id/remindersLabel" />
+
+        <CheckBox
+            android:id="@+id/reminder2h"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:text="@string/add_event_layout_reminder_2h"
+            app:layout_constraintStart_toStartOf="@+id/reminder1h"
+            app:layout_constraintTop_toBottomOf="@+id/reminder1h" />
+
+        <CheckBox
+            android:id="@+id/reminder3h"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:text="@string/add_event_layout_reminder_3h"
+            app:layout_constraintStart_toStartOf="@+id/reminder2h"
+            app:layout_constraintTop_toBottomOf="@+id/reminder2h" />
+
+        <CheckBox
+            android:id="@+id/reminder8h"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="68dp"
+            android:layout_marginRight="68dp"
+            android:clickable="false"
+            android:text="@string/add_event_layout_reminder_8h"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/reminder1h" />
+
+        <CheckBox
+            android:id="@+id/reminder12h"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:text="@string/add_event_layout_reminder_12h"
+            app:layout_constraintStart_toStartOf="@+id/reminder8h"
+            app:layout_constraintTop_toBottomOf="@+id/reminder8h" />
+
+        <CheckBox
+            android:id="@+id/reminder24h"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:text="@string/add_event_layout_reminder_24h"
+            app:layout_constraintStart_toStartOf="@+id/reminder12h"
+            app:layout_constraintTop_toBottomOf="@+id/reminder12h" />
+
+        <ListView
+            android:id="@+id/servicesListView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/serviceLabel"
+            app:layout_constraintTop_toBottomOf="@+id/serviceLabel" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintEnd_toEndOf="@+id/dateTimeIco"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/dateTimeIco"
+            app:layout_constraintTop_toBottomOf="@+id/dateTimeIco"
+            app:srcCompat="@drawable/ic_local_offer_black_24dp" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView10"
+            app:layout_constraintStart_toStartOf="@+id/imageView10"
+            app:layout_constraintTop_toBottomOf="@+id/imageView10"
+            app:srcCompat="@drawable/ic_notifications_black_24dp" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/servicesListView"
+            app:srcCompat="@drawable/ic_attach_money_black_24dp" />
+
+        <TextView
+            android:id="@+id/priceField"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="16dp"
+            android:editable="false"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:inputType="none"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@+id/servicesListView"
+            app:layout_constraintTop_toBottomOf="@id/servicesListView" />
+
+
+        <ImageButton
+            android:id="@+id/editButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="256dp"
+            android:layout_marginStart="256dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/roundedbutton"
+            android:onClick="editEvent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_edit_white_24dp" />
+
+
+        <ImageButton
+            android:id="@+id/removeButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/roundedbutton"
+            android:onClick="removeEvent"
+            app:layout_constraintStart_toEndOf="@+id/editButton"
+            app:layout_constraintTop_toTopOf="@+id/editButton"
+            app:srcCompat="@drawable/ic_delete_black_24dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="301dp" />
+
+        <TextView
+            android:id="@+id/dashText"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:gravity="bottom"
+            android:text="-"
+            android:textSize="32dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/timeFromField"
+            app:layout_constraintTop_toBottomOf="@+id/clientNameField" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView7"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView7"
+            app:layout_constraintTop_toBottomOf="@+id/imageView7"
+            app:srcCompat="@drawable/ic_note_black_24dp" />
+
+        <TextView
+            android:id="@+id/notesField"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="16dp"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@+id/priceField"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/priceField"
+            app:layout_constraintTop_toBottomOf="@+id/priceField" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

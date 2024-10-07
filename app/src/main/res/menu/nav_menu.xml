@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:id="@+id/grp1" android:checkableBehavior="single">
+        <item
+            android:id="@+id/select1day"
+            android:icon="@drawable/ic_filter_1_black_24dp"
+            android:title="@string/nav_day" />
+        <item
+            android:id="@+id/select3day"
+            android:icon="@drawable/ic_filter_3_black_24dp"
+            android:title="@string/nav_3day" />
+        <item
+            android:id="@+id/select7day"
+            android:icon="@drawable/ic_filter_7_black_24dp"
+            android:title="@string/nav_7day" />
+        <item
+            android:id="@+id/selectMonth"
+            android:icon="@drawable/ic_apps_black_24dp"
+            android:title="@string/nav_month" />
+    </group>
+
+    <group android:id="@+id/grp2" android:checkableBehavior="single">
+        <item
+            android:id="@+id/services"
+            android:icon="@drawable/ic_local_offer_black_24dp"
+            android:title="@string/nav_services" />
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="@string/nav_settings" />
+
+        <item
+            android:id="@+id/oldClients"
+            android:icon="@drawable/ic_record_voice_over_black_24dp"
+            android:title="@string/nav_oldClients" />
+
+        <item
+            android:id="@+id/payments"
+            android:icon="@drawable/ic_attach_money_black_24dp"
+            android:title="@string/nav_payments" />
+
+        <item
+            android:id="@+id/messageClients"
+            android:icon="@drawable/ic_message_black_24dp"
+            android:title="@string/nav_messageClients" />
+    </group>
+
+</menu>
